@@ -1,6 +1,5 @@
 ## DesignPatterns
 
-----------------------------------
 MVC (Model-View-Controller)
 * Model: Contains a data structure for representing objects in the application such as User, Product, or Event.
 
