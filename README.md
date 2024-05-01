@@ -11,7 +11,7 @@ Usage:
 * Suitable for projects that have clear division of duties and controls between data (Model), display (View), and control operations (Controller).
 * Works well for simple and not very complicated projects.
 
-----------------------------------
+<h1></h1>
 MVVM ( Model-View-ViewModel )
 * Model: Contains a data structure for representing objects in the application such as User, Product, or Event.
 
