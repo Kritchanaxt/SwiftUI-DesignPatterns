@@ -1,6 +1,7 @@
 ## DesignPatterns
 
-MVC (Model-View-Controller)
+## MVC (Model-View-Controller)
+
 * Model: Contains a data structure for representing objects in the application such as User, Product, or Event.
 
 * View: Contains parts related to various types of display, such as the login screen, product list screen, or product details screen.
@@ -11,8 +12,8 @@ Usage:
 * Suitable for projects that have clear division of duties and controls between data (Model), display (View), and control operations (Controller).
 * Works well for simple and not very complicated projects.
 
-<h1></h1>
-MVVM ( Model-View-ViewModel )
+
+## MVVM ( Model-View-ViewModel )
 * Model: Contains a data structure for representing objects in the application such as User, Product, or Event.
 
 * View: Displays things like layouts for user information, and other UI elements.
@@ -23,8 +24,7 @@ Usage:
 * Suitable for projects that involve working with complex data. ViewModel is used as a way to manage and transform data so that View can display it appropriately.
 * Efficient in working with complex UIs and with frequently updated data.
 
-----------------------------------
-MVP ( Model-View-Presenter )
+## MVP ( Model-View-Presenter )
 * Model: Contains a data structure for representing objects in the application such as User, Product, or Event.
 
 * View: Displays and interacts with the user, such as a subscription form, home page, or settings window.
@@ -35,8 +35,7 @@ Usage:
 * Suitable for projects where the duties of displaying data and managing data are clearly separated.
 * Presenter is used as a communication channel between Model and View without creating a direct connection between View and Model.
 
-----------------------------------
-VIPER ( View-Interactor-Presenter-Entity-Routing )
+## VIPER ( View-Interactor-Presenter-Entity-Routing )
 * View: Display and interact with the user. which is not responsible for data processing.
 
 * Interactor: is responsible for dealing with data and business transactions, such as retrieving data from a server, managing data or interacting with a database.
