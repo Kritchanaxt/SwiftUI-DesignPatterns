@@ -1,4 +1,4 @@
-# SwiftUI Design Patterns
+# SwiftUI Design Patterns 🐦‍🔥
 
 ## MVC (Model-View-Controller)
 
