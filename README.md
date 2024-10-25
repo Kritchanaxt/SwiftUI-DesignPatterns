@@ -1,51 +1,50 @@
- 
+
 ## MVC (Model-View-Controller)
 
-* Model: Contains a data structure for representing objects in the application such as User, Product, or Event.
+- **Model:** ประกอบด้วยโครงสร้างข้อมูลที่แทนวัตถุในแอปพลิเคชัน เช่น ผู้ใช้ (User), สินค้า (Product) หรือเหตุการณ์ (Event)
+- **View:** จัดการส่วนประกอบ UI ที่เกี่ยวข้องกับการแสดงผลต่างๆ เช่น หน้าจอล็อกอิน, หน้ารายการสินค้า หรือหน้ารายละเอียดสินค้า
+- **Controller:** รับผิดชอบในการเชื่อมต่อระหว่าง Model และ View เช่น การดึงข้อมูลผู้ใช้จากฐานข้อมูลและแสดงผลบนหน้าจอ
 
-* View: Contains parts related to various types of display, such as the login screen, product list screen, or product details screen.
+### การใช้งาน:
+- เหมาะสำหรับโครงการที่มีการแยกหน้าที่ที่ชัดเจนระหว่างข้อมูล (Model), การแสดงผล (View) และการควบคุมการดำเนินงาน (Controller)
+- ทำงานได้ดีสำหรับโครงการที่ไม่ซับซ้อนมาก
 
-* Controller: handles data and display, for example pulling user information from a database and displaying it on the screen.
+---
 
-Usage:
-* Suitable for projects that have clear division of duties and controls between data (Model), display (View), and control operations (Controller).
-* Works well for simple and not very complicated projects.
+## MVVM (Model-View-ViewModel)
 
+- **Model:** ประกอบด้วยโครงสร้างข้อมูลที่แทนวัตถุในแอปพลิเคชัน เช่น ผู้ใช้ (User), สินค้า (Product) หรือเหตุการณ์ (Event)
+- **View:** แสดงผล UI รวมถึงเลย์เอาต์สำหรับข้อมูลผู้ใช้และองค์ประกอบส่วนติดต่ออื่นๆ
+- **ViewModel:** จัดการสถานะและการนำเสนอของ View โดยตรง เช่น การตรวจสอบข้อมูลก่อนการแสดงผลและการจัดรูปแบบข้อมูลเพื่อให้แสดงผลได้อย่างเหมาะสม
 
-## MVVM ( Model-View-ViewModel )
-* Model: Contains a data structure for representing objects in the application such as User, Product, or Event.
+### การใช้งาน:
+- เหมาะสำหรับโครงการที่มีการจัดการข้อมูลที่ซับซ้อน ViewModel จะเปลี่ยนรูปแบบและเตรียมข้อมูลสำหรับ View เพื่อให้แสดงผลได้อย่างถูกต้อง
+- มีประสิทธิภาพสำหรับแอปพลิเคชันที่มี UI ซับซ้อนและข้อมูลที่ได้รับการอัปเดตบ่อยครั้ง
 
-* View: Displays things like layouts for user information, and other UI elements.
+---
 
-* ViewModel: directly manipulates the state and display of the View, such as checking data before displaying, formatting data so that the View can display properly.
+## MVP (Model-View-Presenter)
 
-Usage:
-* Suitable for projects that involve working with complex data. ViewModel is used as a way to manage and transform data so that View can display it appropriately.
-* Efficient in working with complex UIs and with frequently updated data.
+- **Model:** ประกอบด้วยโครงสร้างข้อมูลที่แทนวัตถุในแอปพลิเคชัน เช่น ผู้ใช้ (User), สินค้า (Product) หรือเหตุการณ์ (Event)
+- **View:** รับผิดชอบในการแสดงข้อมูลและการโต้ตอบกับผู้ใช้ เช่น แบบฟอร์มสมัครสมาชิก, หน้าหลัก หรือหน้าการตั้งค่า
+- **Presenter:** ทำหน้าที่เป็นสื่อกลางระหว่าง Model และ View โดยรับผิดชอบในการตอบสนองจากผู้ใช้และประมวลผลข้อมูล เช่น การตรวจสอบการตั้งค่าและการอัปเดตการแสดงผล
 
-## MVP ( Model-View-Presenter )
-* Model: Contains a data structure for representing objects in the application such as User, Product, or Event.
+### การใช้งาน:
+- เหมาะสำหรับโครงการที่มีการแยกหน้าที่การแสดงข้อมูลและการจัดการข้อมูลอย่างชัดเจน
+- Presenter ทำหน้าที่เป็นช่องทางการสื่อสารระหว่าง Model และ View โดยไม่สร้างการเชื่อมต่อโดยตรงระหว่าง View และ Model
 
-* View: Displays and interacts with the user, such as a subscription form, home page, or settings window.
+---
 
-* Presenter: Handles responses from users. and process information, for example, checking settings, updating screen information.
+## VIPER (View-Interactor-Presenter-Entity-Routing)
 
-Usage:
-* Suitable for projects where the duties of displaying data and managing data are clearly separated.
-* Presenter is used as a communication channel between Model and View without creating a direct connection between View and Model.
+- **View:** แสดงผลและโต้ตอบกับผู้ใช้ โดยไม่รับผิดชอบในการประมวลผลข้อมูล
+- **Interactor:** รับผิดชอบในการจัดการข้อมูลและธุรกรรมทางธุรกิจ เช่น การดึงข้อมูลจากเซิร์ฟเวอร์, การจัดการข้อมูล หรือการโต้ตอบกับฐานข้อมูล
+- **Presenter:** จัดการการแสดงผลและการประมวลผลข้อมูล เช่น การตั้งค่ารูปแบบข้อมูลเพื่อการแสดงผล และการควบคุมกระบวนการโดยตรง
+- **Entity:** โครงสร้างข้อมูลที่แทนวัตถุในแอปพลิเคชัน ใช้เป็นฐานข้อมูลหรือตัวแทนข้อมูล
+- **Routing:** จัดการการเปลี่ยนแปลงและการนำทางระหว่างหน้าจอ เช่น การสร้างเส้นทางการนำทางและการนำทางผ่านหน้าจอ
 
-## VIPER ( View-Interactor-Presenter-Entity-Routing )
-* View: Display and interact with the user. which is not responsible for data processing.
+### การใช้งาน:
+- เหมาะสำหรับโครงการที่ซับซ้อนและมีความสำคัญต่อการทดสอบ โดยการแบ่งหน้าที่ออกเป็นชั้นงาน
+- แต่ละส่วนจะทำงานอย่างอิสระและเชื่อมต่อกันผ่านอินเทอร์เฟซ
 
-* Interactor: is responsible for dealing with data and business transactions, such as retrieving data from a server, managing data or interacting with a database.
-
-* Presenter: Manages the display and processing of data, such as setting data formats for display, directly controlling processing.
-
-* Entity: A data structure for representing objects in an application. Used as a database or data representative.
-
-* Routing: Handles transitions and navigation between screens, such as creating navigation routes and navigating through screens.
-
-
-Usage:
-* Suitable for projects that are complex and important for testing. (testability) by dividing duties into layers in work
-* Each section is independent and connected through an interface.
+--- 
